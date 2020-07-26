@@ -1,6 +1,4 @@
 import UIKit
-
-
 func reverse(_ string:String) -> Void {
   var temp =  ""
   
@@ -15,4 +13,3 @@ func reverse(_ string:String) -> Void {
 }
 
 reverse("sanoj")
-
