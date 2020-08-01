@@ -3,6 +3,6 @@
     <pages>
         <page name='ShuffleString'/>
         <page name='ReeversString'/>
-        <page name='DuplicateArrray'/>
+        <page name='RemoveDuplicateArrrayElementUniqueLength'/>
     </pages>
 </playground>
