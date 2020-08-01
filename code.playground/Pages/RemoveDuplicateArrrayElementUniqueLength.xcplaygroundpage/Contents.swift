@@ -42,11 +42,11 @@ import Foundation
  */
 
 func removeDuplicates(_ nums: inout [Int]) -> Int {
-    var arrayLentght = 0
     var nextElementIndex:Int = 1
     var currentElementIndex:Int = 0
     var noduplicated:[Int] = [Int]()
     var untilunique = false
+    
     if nums.count == 0 {
         return 0
     }else if nums.count == 1 {
@@ -56,14 +56,13 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
                if (nums[currentElementIndex] == nums[nextElementIndex]) {
                    nextElementIndex = nextElementIndex + 1
                 if (!untilunique && nextElementIndex == nums.count){
-                        noduplicated.append(nums[currentElementIndex])
+                       noduplicated.append(nums[currentElementIndex])
                        untilunique = true
                    }
                }else {
                     noduplicated.append(nums[currentElementIndex])
                    currentElementIndex = nextElementIndex
                    nextElementIndex = nextElementIndex + 1
-                   arrayLentght  = arrayLentght + 1
                    untilunique = false
                    if nextElementIndex == nums.count {
                        noduplicated.append(nums[nextElementIndex-1])
@@ -72,10 +71,9 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
            }
     }
     
-    arrayLentght = arrayLentght + 1
     print("Unique Array: \(noduplicated)")
-    return arrayLentght
+    return noduplicated.count
 }
 
-var array:[Int] = [0,2,4,5,6,6]
+var array:[Int] = []
 print("Unique Element: \(removeDuplicates(&array))")
