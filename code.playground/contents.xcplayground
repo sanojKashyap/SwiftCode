@@ -3,5 +3,6 @@
     <pages>
         <page name='ShuffleString'/>
         <page name='ReeversString'/>
+        <page name='DuplicateArrray'/>
     </pages>
 </playground>

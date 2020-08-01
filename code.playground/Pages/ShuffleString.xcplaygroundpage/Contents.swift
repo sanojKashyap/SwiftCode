@@ -6,12 +6,11 @@ import Foundation
 
 class ShuffleString {
     func restoreString(_ s: String, _ indices:[Int]) -> String {
-        let dataArray = indices
-        let array:[Int] = dataArray.sorted(by: { $0 < $1 }) as [Int]
+        let array:[Int] = indices.sorted(by: { $0 < $1 }) as [Int]
         let characters = Array(s)
         var tempstring = ""
         for index in 0..<array.count {
-            let oldIndex = dataArray.firstIndex(of: index)
+            let oldIndex = indices.firstIndex(of: index)
             tempstring = tempstring + String(characters[array[oldIndex!]])
         }
         print("\(tempstring)")
