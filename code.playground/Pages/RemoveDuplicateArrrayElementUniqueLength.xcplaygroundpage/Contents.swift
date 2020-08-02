@@ -42,38 +42,48 @@ import Foundation
  */
 
 func removeDuplicates(_ nums: inout [Int]) -> Int {
-    var nextElementIndex:Int = 1
-    var currentElementIndex:Int = 0
-    var noduplicated:[Int] = [Int]()
-    var untilunique = false
-    
-    if nums.count == 0 {
-        return 0
-    }else if nums.count == 1 {
-        noduplicated.append(nums[0])
-    }else if (nums.count >= 2) {
-        while nextElementIndex < nums.count {
-               if (nums[currentElementIndex] == nums[nextElementIndex]) {
-                   nextElementIndex = nextElementIndex + 1
-                if (!untilunique && nextElementIndex == nums.count){
-                       noduplicated.append(nums[currentElementIndex])
-                       untilunique = true
-                   }
-               }else {
-                    noduplicated.append(nums[currentElementIndex])
-                   currentElementIndex = nextElementIndex
-                   nextElementIndex = nextElementIndex + 1
-                   untilunique = false
-                   if nextElementIndex == nums.count {
-                       noduplicated.append(nums[nextElementIndex-1])
-                   }
-               }
-           }
+//    var nextElementIndex:Int = 1
+//    var currentElementIndex:Int = 0
+//    var noduplicated:[Int] = [Int]()
+//    var untilunique = false
+//
+//    if nums.count == 0 {
+//        return 0
+//    }else if nums.count == 1 {
+//        noduplicated.append(nums[0])
+//    }else if (nums.count >= 2) {
+//        while nextElementIndex < nums.count {
+//               if (nums[currentElementIndex] == nums[nextElementIndex]) {
+//                   nextElementIndex = nextElementIndex + 1
+//                if (!untilunique && nextElementIndex == nums.count){
+//                       noduplicated.append(nums[currentElementIndex])
+//                       untilunique = true
+//                   }
+//               }else {
+//                    noduplicated.append(nums[currentElementIndex])
+//                   currentElementIndex = nextElementIndex
+//                   nextElementIndex = nextElementIndex + 1
+//                   untilunique = false
+//                   if nextElementIndex == nums.count {
+//                       noduplicated.append(nums[nextElementIndex-1])
+//                   }
+//               }
+//           }
+//    }
+//
+//    print("Unique Array: \(noduplicated)")
+//    return noduplicated.count
+        
+    if (nums.count == 0) { return 0 }
+    var i = 0
+    for j in 1..<nums.count {
+        if (nums[j] != nums[i]) {
+            i = i + 1
+            nums[i] = nums[j]
+        }
     }
-    
-    print("Unique Array: \(noduplicated)")
-    return noduplicated.count
+    return i + 1
 }
 
-var array:[Int] = []
+var array:[Int] = [1,1,2,3,3,4,4]
 print("Unique Element: \(removeDuplicates(&array))")

@@ -4,5 +4,6 @@
         <page name='ShuffleString'/>
         <page name='ReeversString'/>
         <page name='RemoveDuplicateArrrayElementUniqueLength'/>
+        <page name='ContainsDuplicate '/>
     </pages>
 </playground>
