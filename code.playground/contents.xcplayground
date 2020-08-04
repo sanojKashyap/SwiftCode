@@ -6,5 +6,6 @@
         <page name='RemoveDuplicateArrrayElementUniqueLength'/>
         <page name='ContainsDuplicate '/>
         <page name='SingleNumber'/>
+        <page name='MoveZeroesSolution '/>
     </pages>
 </playground>
