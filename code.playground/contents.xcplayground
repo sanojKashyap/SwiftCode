@@ -8,5 +8,6 @@
         <page name='SingleNumber'/>
         <page name='MoveZeroesSolution '/>
         <page name='RotateArray'/>
+        <page name='LinkedList'/>
     </pages>
 </playground>
